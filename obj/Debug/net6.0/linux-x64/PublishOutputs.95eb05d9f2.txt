@@ -1,0 +1,8 @@
+D:\VSCode\Paperless_rfa\bin\Debug\net6.0\linux-x64\publish\Paperless_rfa
+D:\VSCode\Paperless_rfa\bin\Debug\net6.0\linux-x64\publish\appsettings.Development.json
+D:\VSCode\Paperless_rfa\bin\Debug\net6.0\linux-x64\publish\appsettings.json
+D:\VSCode\Paperless_rfa\bin\Debug\net6.0\linux-x64\publish\libman.json
+D:\VSCode\Paperless_rfa\bin\Debug\net6.0\linux-x64\publish\Paperless_rfa.dll
+D:\VSCode\Paperless_rfa\bin\Debug\net6.0\linux-x64\publish\Paperless_rfa.deps.json
+D:\VSCode\Paperless_rfa\bin\Debug\net6.0\linux-x64\publish\Paperless_rfa.runtimeconfig.json
+D:\VSCode\Paperless_rfa\bin\Debug\net6.0\linux-x64\publish\Paperless_rfa.pdb

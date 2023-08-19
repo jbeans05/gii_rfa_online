@@ -1,0 +1,66 @@
+<div id="role">
+    <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header">
+                <div class="float-left">
+                    <div class="input-group input-group-sm ">                        
+                        <input type="text" class="form-control" placeholder="Username or Role"data-bind="value: keyword">
+                    </div>
+                </div>
+                <div class="btn-group float-right shadow">
+                    <a href="#" class="btn btn-default btn-sm " data-bind="click: Search"><i
+                            class="fa-solid fa-magnifying-glass text-info"></i> Search</a>
+                    <a href="#" class="btn btn-default btn-sm " data-bind="click: Add"><i class="fas fa-light fa-pencil text-warning"></i>Add</a>
+
+                </div>
+            </div>
+            <div class="card-body table-responsive p-0">
+                <table class="table table-condensed table-striped table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>Role Code</th>
+                            <th>Role Name</th>
+                            <th>Description</th>
+                            <th>Created By</th>
+                            <th>Created Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: roles">
+                        <!--ko if: !!!isNew()-->
+                        <tr>
+                            <td data-bind="text: roleCode"></td>
+                            <td data-bind="text: roleName"></td>
+                            <td data-bind="text: description"></td>
+                            <td data-bind="text: createdBy"></td>
+                            <td data-bind="text: createdTime"></td>
+                            <td></td>
+                        </tr>
+                        <!--/ko-->
+
+                        <!--ko if: isNew()-->
+                        <tr>
+                            <td> <input type="text" class="form-control form-conrtol-sm" data-bind="value: roleCode"> </td>
+                            <td> <input type="text" class="form-control form-conrtol-sm" data-bind="value: roleName"></td>
+                            <td> <input type="text" class="form-control form-conrtol-sm" data-bind="value: description"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">
+                                <a href="#" class="btn btn-default btn-sm" data-bind="click: $parent.Save"><i class="fa-solid fa-floppy-disk text-primary"></i> Save</a>
+                                <a href="#" class="btn btn-default btn-sm" data-bind="click: $parent.Cancel"><i class="fa-solid fa-ban text-danger"></i>  Cancel</a>
+                            </td>
+                        </tr>
+                        <!--/ko-->
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+<script type="text/javascript" src="~/js/onlinerfa_master_role.js"></script>

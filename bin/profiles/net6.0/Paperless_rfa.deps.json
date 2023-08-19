@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Paperless_rfa/1.0.0": {
+        "runtime": {
+          "Paperless_rfa.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Paperless_rfa/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<div id="user">
+    <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header">
+                <div class="float-left">
+                    <div class="input-group input-group-sm ">
+                        <span class="input-group-text " id="basic-addon1">username</span>
+                        <input type="text" class="form-control" placeholder="Username" data-bind="value: userName">
+                    </div>
+                </div>
+                <div class="btn-group float-right shadow">
+                    <a href="#" class="btn btn-default btn-sm " data-bind="click: Search"><i class="fa-solid fa-magnifying-glass text-info"></i> Search</a>
+                    <a href="#" class="btn btn-default btn-sm " data-bind="click: AddUser"><i class="fas fa-light fa-pencil text-warning"></i> Add</a>                  
+                    <a href="#" class="btn btn-default btn-sm "><i class="fas fa-light fa-file-excel text-success"></i> Download</a>
+                </div>
+            </div>
+            <div class="card-body table-responsive p-0">
+                <table class="table table-condensed table-striped table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                           
+                            <th>EmployeeId</th>
+                            <th>User name</th>
+                            <th>Password</th>
+                            <th>Role</th>
+                            <th>Is Lock</th>
+                            <th>status</th>                       
+                            <th>created by</th>
+                            <th>Created time</th>    
+                            <th></th>                   
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: users">
+                        <!--ko if: !!!isNew() && !!!isEdit()-->
+                        <tr>                            
+                            <td data-bind="text: employeeId"></td>
+                            <td data-bind="text: userName"></td>
+                            <td data-bind="text: pass"></td>
+                            <td data-bind="text: role">U</td>
+                            <td data-bind="text: isLock() ? 'Lock':'Unlock'"> </td>
+                            <td data-bind="text: status() ? 'Active':'Inactive'"></td>
+                            <td data-bind="text: createdBy"></td>
+                            <td data-bind="text: createdTime"></td>
+                            <td>
+                                 <a href="#" data-bind="click: $parent.EditRow" ><i class="fa-sharp fa-solid fa-pen-to-square"></i> </a>
+                            </td>
+                        </tr>
+                        <!--/ko-->
+
+
+                        <!--ko if: isNew()-->
+                        <tr>                            
+                            <td><input type="text" class="form-control" data-bind="value : employeeId"> </td>
+                            <td><input type="text" class="form-control" data-bind="value : userName"> </td>
+                            <td><input type="text" class="form-control" data-bind="value : pass"></td>
+                            <td><input type="text" class="form-control" data-bind="value : role"></td>
+                            <td><input type="text" class="form-control" data-bind="value : isLock"></td>
+                            <td><input type="text" class="form-control" data-bind="value : status"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!--/ko-->
+
+
+                        <!--ko if: isEdit()-->
+                        <tr>                            
+                            <td data-bind="text : employeeId"></td>
+                            <td><input type="text" class="form-control" data-bind="value : userName"> </td>
+                            <td><input type="text" class="form-control" data-bind="value : pass"></td>
+                            <td><input type="text" class="form-control" data-bind="value : role"></td>
+                            <td><input type="text" class="form-control" data-bind="value : isLock"></td>
+                            <td><input type="text" class="form-control" data-bind="value : status"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!--/ko-->
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!--ko if: isAdd()-->
+    <div class="col-md-12">
+        <a href="#" class="btn btn-default btn-sm"><i class="fa-solid fa-floppy-disk text-primary"></i> Save</a>
+        <a href="#" class="btn btn-default btn-sm" data-bind="click: Cancel"><i class="fa-solid fa-ban text-danger"></i> Cancel</a>
+    </div>
+    <!--/ko-->
+</div>
+
+<script type="text/javascript" src="~/js/onlinerfa_master_user.js"></script>

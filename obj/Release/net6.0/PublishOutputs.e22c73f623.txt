@@ -1,0 +1,8 @@
+D:\VSCode\Paperless_rfa\bin\Release\net6.0\publish\Paperless_rfa.exe
+D:\VSCode\Paperless_rfa\bin\Release\net6.0\publish\appsettings.Development.json
+D:\VSCode\Paperless_rfa\bin\Release\net6.0\publish\appsettings.json
+D:\VSCode\Paperless_rfa\bin\Release\net6.0\publish\libman.json
+D:\VSCode\Paperless_rfa\bin\Release\net6.0\publish\Paperless_rfa.dll
+D:\VSCode\Paperless_rfa\bin\Release\net6.0\publish\Paperless_rfa.deps.json
+D:\VSCode\Paperless_rfa\bin\Release\net6.0\publish\Paperless_rfa.runtimeconfig.json
+D:\VSCode\Paperless_rfa\bin\Release\net6.0\publish\Paperless_rfa.pdb

@@ -1,0 +1,144 @@
+<div id="items">
+    <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header">
+                <div class="float-left">
+                    <div class="input-group input-group-sm ">
+                        <input type="text" class="form-control" placeholder="Item Name" data-bind="value: keyword">
+
+                    </div>
+
+                </div>
+                <div class="btn-group float-right shadow">
+                    <a href="#" class="btn btn-default btn-sm" data-bind="click: Search"><i class="fa-solid fa-magnifying-glass text-info"></i>Search</a>
+                    <a href="#" class="btn btn-default btn-sm"><i class="fas fa-solid fa-file-excel text-success"></i>Download</a>
+                    <a href="#" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#uploadItem"><i class="fas fa-solid fa-file-excel text-success"></i>Upload</a>
+                    <a href="#" class="btn btn-default btn-sm" data-bind="click: Add"><i class="fas fa-light fa-pencil text-warning"></i> Add</a>
+                </div>
+            </div>
+
+            <div class="card-body table-responsive p-0">
+                <table class="table table-condensed table-striped table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>Item code</th>
+                            <th>Item Name</th>
+                            <th>Brand</th>
+                            <th>Description</th>
+                            <th>suppliers</th>
+                            <th>unit Price</th>
+                            <th>Currency</th>
+                            <th>Status</th>
+                            <th>Created By</th>
+                            <th>Created Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: items">
+                        <!--ko if : !!!isNew()-->
+                        <tr>
+                            <td data-bind="text: itemCode"></td>
+                            <td data-bind="text: itemName"></td>
+                            <td data-bind="text: brand"></td>
+                            <td data-bind="text: desc"></td>
+                            <td data-bind="text: supplier"></td>
+                            <td data-bind="text: unitPrice"></td>
+                            <td data-bind="text: currency"></td>
+                            <td data-bind="text: status"></td>
+                            <td data-bind="text: createdBy"></td>
+                            <td data-bind="text: createdTime"></td>
+                            <td>
+                                <!--ko if: isDraft()-->
+                                <a href="#" class="btn btn-sm btn-default" Data-bind="click: $root.remove"><i
+                                        class="fa fa-trash"></i></a>
+                                <!--/ko-->
+                            </td>
+                        </tr>
+                        <!--/ko-->
+
+                        <!--ko if : isNew()-->
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: itemCode">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: itemName">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: brand">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: desc">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: supplier">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: unitPrice">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: currency">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: status">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: createdBy">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-conrtol-sm" data-bind="value: createdTime">
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-default" Data-bind="click: $root.SaveDraft"><i
+                                        class="fa fa-clock"></i> Save as draft</a>
+                                <a href="#" class="btn btn-sm btn-default" Data-bind="click: $root.remove"><i
+                                        class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <!--/ko-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--ko if: isAdd() -->
+    <div class="col-md-12">
+        <a href="#" class="btn btn-default btn-sm"><i class="fa-solid fa-floppy-disk text-primary"></i> Save</a>
+        <a href="#" class="btn btn-default btn-sm" data-bind="click: Cancel"><i class="fa-solid fa-ban text-danger"></i>
+            Cancel</a>
+    </div>
+    <!--/ko-->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="uploadItem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Upload Item</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>before you upload master Items, please check the content correctlly. the file should be excel extention ( xls | xlsx )  </p>
+        <div class="row">
+           <div class="mb-2">
+                <label for="formFileSm" class="form-label">File must be (xls | xlsx)</label>
+                <input class="form-control form-control" id="excelItem" name="excelItem" type="file">
+            </div>            
+            <div class="col-12 ml-1" ><input type="button" class="btn btn-primary" value="Upload" data-bind="click: Upload"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+<script type="text/javascript" src="~/js/onlinerfa_master_items.js"></script>

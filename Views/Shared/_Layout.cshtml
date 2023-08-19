@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Online RFA</title>
+    <partial name="adminLte/_Styles" />
+    <partial name="adminLte/_Scripts" />
+</head>
+<body class="sidebar-mini">
+    <div class="wrapper">
+        <partial name="adminLte/_TopNavigation" />
+        <partial name="adminLte/_MainNavigation" />
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">   
+                        <div class="col-sm-6">
+                            <h4 class="m-0">  @ViewBag.titlePage</h4>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="container-fluid" >
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <aside class="control-sidebar control-sidebar-dark">
+            <div class="p-3">
+                <h5>Title</h5>
+                <p>Sidebar Content</p>
+            </div>
+        </aside>
+        <partial name="adminLte/_Footer" />
+    </div>
+   
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

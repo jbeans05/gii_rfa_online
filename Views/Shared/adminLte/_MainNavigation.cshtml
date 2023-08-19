@@ -1,0 +1,173 @@
+﻿<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="~/Home" class="brand-link">
+        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        <span class="brand-text font-weight-light">Online RFA</span>
+    </a>
+    <div class="sidebar">
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                <li class="nav-header">
+                    <h6>Transaction</h6>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" >
+                        <i class="fa-sharp fa-solid fa-cart-plus text-warning"></i>
+                        <p>
+                            Request Order
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+
+                            <a class="nav-link" asp-controller="RequestOrder" asp-action="CreateRequestOrder">
+                                <i class="fa-regular fa-circle  text-warning fa-2xs"></i>
+                                <p>Create Request Order</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                        
+                            <a class="nav-link" asp-controller="RequestOrder" asp-action="ViewRequestOrder">
+                                <i class="fa-regular fa-circle  text-warning  fa-2xs"></i>
+                                <p>View Request Order</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- HR -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-sharp fa-solid fa-file-signature text-info"></i>
+                        <p>
+                            RFA
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="RequestFormApproval" asp-action="CreateRFA">
+                                <i class="fa-regular fa-circle  text-info fa-2xs"></i>
+                                <p>Create RFA</p>
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" asp-controller="RequestFormApproval" asp-action="CreateRFAforGA">
+                                <i class="fa-regular fa-circle  text-info fa-2xs"></i>
+                                <p>Create RFA for GA</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="RequestFormApproval" asp-action="ViewRFA">
+                                <i class="fa-regular fa-circle  text-info fa-2xs"></i>
+                                <p>View RFA</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Master maintenance-->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-sharp fa-solid fa-file-invoice-dollar text-success"></i>
+                        <p>
+                            Purchase Order
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="PurchaseOrder" asp-action="CreatePUO">
+                                <i class="fa-regular fa-circle  text-success fa-2xs"></i>
+                                <p>Create Purchase Order</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="PurchaseOrder" asp-action="ViewPUO">
+                                <i class="fa-regular fa-circle  text-success fa-2xs"></i>
+                                <p>View Purchase Order</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-sharp fa-solid fa-credit-card text-primary"></i>
+                        <p>
+                            Payment Order
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="PaymentOrder" asp-action="CreatePO">
+                                <i class="fa-regular fa-circle  text-primary"></i>
+                                <p>Create Payment Order</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="PaymentOrder" asp-action="ViewPO">
+                                <i class="fa-regular fa-circle  text-primary"></i>
+                                <p>View Payment Order</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+                <li class="nav-header">
+                    <h6>Master Maintenance</h6>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" asp-controller="MasterMaintenance" asp-action="ManageEmployee">
+                        <i class="fa-solid fa-gears " style="color: #d63384;"></i>
+                        <p>Employee</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="MasterMaintenance" asp-action="MasterItem">
+                        <i class="fa-solid fa-gears " style="color: #d63384;"></i>
+                        <p>Master Items</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="MasterMaintenance" asp-action="MasterSupplier">
+                        <i class="fa-solid fa-gears" style="color: #d63384;"></i>
+                        <p>Master Supplier</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="MasterMaintenance" asp-action="MasterDepartemen">
+                        <i class="fa-solid fa-gears" style="color: #d63384;"></i>
+                        <p>Master Depatement</p>
+                    </a>
+                </li>
+
+                <li class="nav-header">
+                    <h6>User Maintenance</h6>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="MasterMaintenance" asp-action="ManageUser">
+                        <i class="fa-solid fa-gears" style="color: #d63384;"></i>
+                        <p>User</p>
+                    </a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" asp-controller="MasterMaintenance" asp-action="ManageRole">
+                        <i class="fa-solid fa-gears" style="color: #d63384;"></i>
+                        <p>Role</p>
+                    </a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" asp-controller="MasterMaintenance" asp-action="ManageUserRole">
+                        <i class="fa-solid fa-gears" style="color: #d63384;"></i>
+                        <p>User Role</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

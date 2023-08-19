@@ -1,0 +1,116 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Paperless_rfa
+build_property.RootNamespace = Paperless_rfa
+build_property.ProjectDir = D:\VSCode\Paperless_rfa\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\VSCode\Paperless_rfa
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/VSCode/Paperless_rfa/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/MasterMaintenance/ManageUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyTWFpbnRlbmFuY2VcTWFuYWdlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/MasterMaintenance/ManageUserRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyTWFpbnRlbmFuY2VcTWFuYWdlVXNlclJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/MasterMaintenance/MasterDepartemen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyTWFpbnRlbmFuY2VcTWFzdGVyRGVwYXJ0ZW1lbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/MasterMaintenance/MasterItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyTWFpbnRlbmFuY2VcTWFzdGVySXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/MasterMaintenance/MasterSupplier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyTWFpbnRlbmFuY2VcTWFzdGVyU3VwcGxpZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/PaymentOrder/CreatePO.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudE9yZGVyXENyZWF0ZVBPLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/PaymentOrder/ViewPO.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudE9yZGVyXFZpZXdQTy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/PurchaseOrder/CreatePUO.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VPcmRlclxDcmVhdGVQVU8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/PurchaseOrder/ViewPUO.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VPcmRlclxWaWV3UFVPLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/RequestFormApproval/CreateRFA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdEZvcm1BcHByb3ZhbFxDcmVhdGVSRkEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/RequestFormApproval/ViewRFA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdEZvcm1BcHByb3ZhbFxWaWV3UkZBLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/RequestOrder/CreateRequestOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdE9yZGVyXENyZWF0ZVJlcXVlc3RPcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/RequestOrder/ViewRequestOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdE9yZGVyXFZpZXdSZXF1ZXN0T3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/Shared/adminLte/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluTHRlXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/Shared/adminLte/_MainNavigation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluTHRlXF9NYWluTmF2aWdhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/Shared/adminLte/_Scripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluTHRlXF9TY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/Shared/adminLte/_Styles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluTHRlXF9TdHlsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/Shared/adminLte/_TopNavigation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluTHRlXF9Ub3BOYXZpZ2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VSCode/Paperless_rfa/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-gtmwygbhwy

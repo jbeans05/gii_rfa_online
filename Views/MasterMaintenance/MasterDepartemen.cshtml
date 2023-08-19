@@ -1,0 +1,98 @@
+<div id="departement">
+    <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header">
+                <div class="float-left">
+                    <div class="input-group  ">
+                        <input type="text" class="form-control" placeholder="Departement Name"
+                            data-bind="value: keyword">
+
+                    </div>
+
+                </div>
+                <div class="btn-group float-right shadow">
+                    <a href="#" class="btn btn-default" data-bind="click: Add"><i
+                            class="fas fa-light fa-pencil text-warning"></i> Add</a>
+                </div>
+            </div>
+            <div class="card-body table-responsive p-0">
+                <table class="table table-condensed table-striped table-hover text-nowrap">
+                    <thead>
+                        <tr>
+
+                            <th>Dept Code</th>
+                            <th>Dept Name</th>
+                            <th>description</th>
+                            <th>Created By</th>
+                            <th>Created Time</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: departements">
+                        <!--ko if: !!!isNew()-->
+                        <tr>
+                            <td data-bind="text: deptCode"></td>
+                            <td data-bind="text: deptName"></td>
+                            <td data-bind="text: description"></td>
+                            <td data-bind="text: createdBy"></td>
+                            <td data-bind="text: createdDate"></td>
+                            <td>
+                                <!--ko if: !!!isDraft() -->
+                                <a href="#" class="btn btn-default btn-sm" data-bind="click: $parent.Edit"><i
+                                        class="fa fa-pencil text-success"></i></a>
+                                <a href="#" class="btn btn-default btn-sm" data-bind="click: $parent.Delete"><i
+                                        class="fa fa-trash text-danger"></i></a>
+
+                                <!--/ko-->
+                                <!--ko if : isDraft()-->
+                                <span class="text-xs"><i class="fa fa-clock " style="color: rgb(160, 158, 158);"></i>
+                                    Draft</span>
+                                <!--/ko-->
+
+                            </td>
+                        </tr>
+                        <!--/ko-->
+                        <!--ko if: isNew() || isEdit()-->
+                        <tr>
+                            <td><input type="text" class="form-control form-control-sm" data-bind="value: deptCode">
+                            </td>
+                            <td><input type="text" class="form-control form-control-sm" data-bind="value: deptName">
+                            </td>
+                            <td><input type="text" class="form-control form-control-sm" data-bind="value: description">
+                            </td>
+                            <td><input type="text" class="form-control form-control-sm" placeholder="Auto generate"
+                                    disabled> </td>
+                            <td><input type="text" class="form-control form-control-sm" placeholder="Auto generate"
+                                    disabled> </td>
+
+                            <td>
+                                <a href="#" data-bind="click: $parent.SaveDraft" class="btn btn-default btn-sm"><i
+                                        class="fa fa-check"></i> save as Draft</a>
+                            </td>
+                        </tr>
+                        <!--/ko-->
+                    </tbody>
+                </table>
+            </div>
+            <!--ko if : isAdd() -->
+            <div class="card-footer">
+
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-default btn-sm" data-bind="click: Save"><i
+                            class="fa-solid fa-floppy-disk text-primary"></i> Save</a>
+                    <a href="#" class="btn btn-default btn-sm" data-bind="click: Cancel"><i
+                            class="fa-solid fa-ban text-danger"></i>
+                        Cancel</a>
+                </div>
+
+            </div>
+            <!--/ko-->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="~/js/onlinerfa_master_departement.js"></script>

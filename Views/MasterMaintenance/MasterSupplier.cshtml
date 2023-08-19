@@ -1,0 +1,114 @@
+<div id="supplier">
+    <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header">
+                <div class="float-left">
+                    <div class="input-group ">
+                        <input type="text" class="form-control" placeholder="Supplier Name" data-bind="value: keyword">
+                    </div>
+                </div>
+                <div class="btn-group float-right shadow">
+
+                    <a href="#" class="btn btn-default btn-sm " data-bind="click: Add"><i
+                            class="fas fa-light fa-pencil text-warning"></i> Add</a>
+                </div>
+            </div>
+            <div class="card-body table-responsive p-0">
+                <table class="table table-condensed table-striped table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>status</th>
+                            <th>createdBy</th>
+                            <th>createdTime</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: suppliers">
+                        <!--ko if : !!!isNew() && !!!isEdit()-->
+                        <tr>
+                            <td data-bind="text: id"></td>
+                            <td data-bind="text: name"></td>
+                            <td data-bind="text: phone"></td>
+                            <td data-bind="text: address"></td>
+                            <td data-bind="text: email"></td>
+                            <td data-bind="text: status"></td>
+                            <td data-bind="text: createdBy"></td>
+                            <td data-bind="text: createdDate"></td>
+                            <td>
+                                <!--ko if: isDraft()-->
+                                <i class="fa fa-clock text-sm"></i> &nbsp;
+                                <a href="#" data-bind="click: $root.rowEvenEdit"><i
+                                        class="fa fa-pen-to-square text-sky"></i> Edit</a> &nbsp;
+                                <a href="#" data-bind="click: $root.rowEvenDelete"><i class="fa fa-trash text-sm"></i>
+                                    Cancel</a>
+                                <!--/ko-->
+
+                                <!--ko if: !!!isDraft()-->
+                                <a href="#" data-bind="click: $parent.rowEvenEdit"><i
+                                        class="fa fa-pen-to-square text-sky"></i> Edit</a> &nbsp;
+                                <a href="#" data-bind="click: $parent.Delete"><i class="fa fa-trash text-danger"></i>
+                                    Delete</a>
+                                <!--/ko-->
+                            </td>
+                        </tr>
+                        <!--/ko-->
+                        <!--ko if : isNew() || isEdit()-->
+                        <tr>
+                            <td>Automated</td>
+                            <td><input type="text" class="form-control form-control" data-bind="value: name"></td>
+                            <td><input type="text" class="form-control form-control" data-bind="value: phone"></td>
+                            <td><input type="text" class="form-control form-control" data-bind="value: address"></td>
+                            <td><input type="text" class="form-control form-control" data-bind="value: email"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a href="#" Data-bind="click: $root.SaveDraft"><i class="fa fa-clock text-gray"></i> Save as draft</a> &nbsp;
+                                <a href="#" Data-bind="click: $root.DeleteAdd"><i class="fa fa-trash text-red"></i> Delete </a>
+                            </td>
+                        </tr>
+                        <!--/ko-->
+                    </tbody>
+                </table>
+            </div>
+            <!--ko if : isAdd() -->
+            <div class="card-footer">
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-default " data-bind="click: Save"><i class="fa-solid fa-floppy-disk text-primary"></i> Save</a>
+                    <a href="#" class="btn btn-default " data-bind="click: Cancel"><i class="fa-solid fa-ban text-danger"></i> Cancel</a>
+                </div>
+            </div>
+            <!--/ko-->
+        </div>
+    </div>
+
+    <!--pagging function-->
+    <!--ko if: !!!isAdd()-->
+    <div class="row col-md-12 mb-5">
+        <div class="col-md-6">
+            <div class="input-group">
+                <button class="btn btn-outline-secondary" type="button" data-bind="click: firstPage">First</button>
+                <button class="btn btn-outline-secondary" type="button"
+                    data-bind="click: previousePage">Previous</button>
+                <input class="form-control col-1 text-center" style="border-color: #6c757D" type="text"
+                    data-bind="value: pageIndex">
+                <button class="btn btn-outline-secondary" type="button" data-bind="click: nextPge">Next</button>
+                <button class="btn btn-outline-secondary" type="button" data-bind="click: lastPage">Last</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <span class="float-end">Page <span data-bind="text: pageIndex"></span>  of <span data-bind="text: totalPage"> </span></span>
+        </div>
+    </div>
+    <!--/ko-->
+
+
+</div>
+
+
+<script type="text/javascript" src="~/js/onlinerfa_master_supplier.js"></script>

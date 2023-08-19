@@ -1,0 +1,184 @@
+<div id="employee">
+    <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header">
+                <div class="float-left">
+                    <div class="input-group ">
+                        <input type="text" class="form-control" placeholder="keyword" data-bind="value: keyword">
+                    </div>
+                </div>
+                <div class="btn-group float-right shadow">
+                    <a href="#" class="btn btn-default" data-bind="click: AddEmployee"><i
+                            class="fas fa-light fa-pencil text-warning"></i>Add</a>
+
+                </div>
+            </div>
+            <div class="card-body table-responsive p-0">
+                <table class="table table-condensed table-striped table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>Employee Id</th>
+                            <th>Employee Name</th>
+                            <th>Departement</th>
+                            <th>Status</th>
+                            <th>Created By</th>
+                            <th>Created Date</th>
+                            <th class="col-md-1"></th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach : employees">
+                        <!--ko if : !!!isNew() && !!!isEdit()-->
+                        <tr>
+                            <td data-bind="text: employeeId"></td>
+                            <td data-bind="text: employeeName"></td>
+                            <td data-bind="text: departement().deptName"></td>
+                            <td data-bind="text: isActive() ? 'Active':'Inactive'"></td>
+                            <td data-bind="text: createdBy"></td>
+                            <td data-bind="text: createdDate"></td>
+                            <td>
+                                <!--ko if : isDraft()-->
+                                <a href="#" data-bind="click: $parent.Edit"><i class="fa fa-pen-to-square text-sky"></i>
+                                    edit</a> &nbsp;
+                                <a href="#" data-bind="click: $parent.Delete"><i class="fa fa-trash text-red"></i>
+                                    delete</a> &nbsp;
+                                <span class="text-xs"><i class="fa fa-clock " style="color: rgb(160, 158, 158);"></i>
+                                    Draft</span>
+                                <!--/ko-->
+
+                                <!--ko if: !!!isDraft() && !!!isNew() && !!!isEdit()-->
+                                <a href="#" data-bind="click: $parent.Edit"><i class="fa fa-pen-to-square text-sky"></i>
+                                    edit</a> &nbsp;
+                                <a href="#" data-bind="click: $parent.Delete"><i class="fa fa-trash text-red"></i>
+                                    delete</a> &nbsp;
+                                <a href="#" data-bind="click: $parent.InActive"><i class="fa fa-trash text-yellow"></i>
+                                    inactive</a>
+                                <!--/ko-->
+                            </td>
+                        </tr>
+                        <!--/ko-->
+
+                        <!--ko if: isNew() -->
+                        <tr>
+                            <td><input type="text" data-bind="value: employeeId" class="form-control"></td>
+                            <td><input type="text" data-bind="value: employeeName" class="form-control"></td>
+                            <td>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control"
+                                        data-bind="value: !!!departement()?'': departement().deptName"
+                                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"
+                                        data-bs-toggle="modal" data-bs-target="#deptSelection">Choose</button>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a href="#" class="btn btn-default" data-bind="click: $parent.remove"><i
+                                        class="fa fa-trash text-danger"></i> </a>
+                                <a href="#" class="btn btn-default" data-bind="click: $parent.SaveDraft"><i
+                                        class="fa fa-check"></i> save as Draft</a>
+                            </td>
+                        </tr>
+                        <!--/ko-->
+
+                        <!--ko if: isEdit()-->
+                        <tr>
+                            <td><input type="text" data-bind="value: employeeId, attr: {'readonly': true}"
+                                    class="form-control"></td>
+                            <td><input type="text" data-bind="value: employeeName" class="form-control"></td>
+                            <td>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control"
+                                        data-bind="value: !!!departement()?'': departement().deptName"
+                                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"
+                                        data-bs-toggle="modal" data-bs-target="#deptSelection">Choose</button>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a href="#" data-bind="click: $parent.cancelEdit"><i class="fa fa-ban text-danger"></i>
+                                    cancel</a> &nbsp;
+                                <a href="#" data-bind="click: $parent.SaveDraft"><i class="fa fa-check"></i> save as
+                                    Draft</a>
+                            </td>
+                        </tr>
+                        <!--/ko-->
+
+                    </tbody>
+                </table>
+            </div>
+            <!--ko if : editable() -->
+            <div class="card-footer">
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-default shadow" data-bind="click: SaveEmployee"><i
+                            class="fa-solid fa-floppy-disk text-primary"></i> Save</a>
+                    <a href="#" class="btn btn-default shadow" data-bind="click: Cancel"><i
+                            class="fa-solid fa-ban text-danger"></i>
+                        Cancel</a>
+                </div>
+            </div>
+            <!--/ko-->
+        </div>
+    </div>
+
+    <!--ko if : !!!editable() -->
+    <div class="row col-md-12 mb-5">
+        <div class="col-md-6">
+            <div class="input-group">
+                <button class="btn btn-outline-secondary" type="button" data-bind="click: firstPage">First</button>
+                <button class="btn btn-outline-secondary" type="button"
+                    data-bind="click: previousePage">Previous</button>
+                <input class="form-control col-1 text-center" style="border-color: #6c757D" type="text"
+                    data-bind="value: pageIndex">
+                <button class="btn btn-outline-secondary" type="button" data-bind="click: nextPge">Next</button>
+                <button class="btn btn-outline-secondary" type="button" data-bind="click: lastPage">Last</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <span class="float-end">Page <span data-bind="text: pageIndex"></span> of <span data-bind="text: totalPage"> </span></span>
+        </div>
+    </div>
+    <!--/ko-->
+
+
+    <!-- Modal dpartement -->
+    <div class="modal fade" id="deptSelection" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Select Departement</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <table class="table table-condensed table-striped table-hover text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>Dept Code</th>
+                                <th>Dept Name</th>
+                                <th>description</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: departements">
+                            <tr data-bind="click: $parent.selectDepartement">
+                                <td data-bind="text: deptCode"></td>
+                                <td data-bind="text: deptName"></td>
+                                <td data-bind="text: description"></td>
+                                <td data-bind="text: year"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="~/js/onlinerfa_master_employee.js"></script>

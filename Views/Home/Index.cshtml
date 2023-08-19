@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div id="dashboard">
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>20</h3>
+                    <p>Request Order</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-cart-plus "></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>23</h3>
+                    <p>Request Form Approval</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>34</h3>
+                    <p>Purchase Order</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-file-invoice-dollar "></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>50</h3>
+                    <p>Payment Order</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--donat chart-->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header border-0">
+                    <div class="d-flex justify-content-between">
+                        <h3 class="card-title">Depatement Summary</h3>
+                        <a href="javascript:void(0);">View Report</a>
+                    </div>
+                </div>
+                <div class="card-body" style="padding: 14px 0;"> 
+                                    
+                        <canvas id="DeptSummary" width="100%" ></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header border-0">
+                    <div class="d-flex justify-content-between">
+                        <h3 class="card-title">Request Summary </h3>
+                        <a href="javascript:void(0);">View Report</a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <canvas id="SummaryAll" width="100%" ></canvas>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="~/js/dashboard.js"></script>

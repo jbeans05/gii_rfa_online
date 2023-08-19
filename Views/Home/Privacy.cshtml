@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+
+<h4>Below data will be printed</h4>
+
+<div id="printedarea">
+    <h1> Hallo its me </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>TEST1</th>
+                <th>TEST2</th>
+                <th>TEST3</th>
+                <th>TEST4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>sdfsdfs</th>
+                <th>dfsdfsdfsdf</th>
+                <th>ghjgsdffdsd</th>
+                <th>vbnvbbvnb</th>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<input type="button" value="Print" id="print" name="print">
+
+<Script>
+    $("#print").on("click", function(){
+        var element = document.getElementById('printedarea');
+        html2pdf(element);
+    });
+</Script>
